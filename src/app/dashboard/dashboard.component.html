@@ -142,34 +142,8 @@
           </ul>
         </div>
       </div>
-      <div class="col py-3">
-        <div class="card mb-3" style="max-width: 540px;" *ngFor="let hotel of hoteles">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src={{hotel.imagen}} class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8" >
-              <div class="card-body">
-                <div>
-                  <h5 class="card-title d-inline">{{hotel.nombre}}</h5>
-                  <div class="card-text notaMedia d-inline float-end">Valoración {{hotel.notamedia}}</div>
-                </div>
-                <p>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </p>
-                <p class="card-text">{{hotel.direccion}}</p>
-                <p class="card-text">{{hotel.precio}}</p>
-                <button type="button" class="btn btn-primary">Buscar</button>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
 </div>
+

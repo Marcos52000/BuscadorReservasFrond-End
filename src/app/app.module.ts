@@ -9,7 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { AdminComponent } from './admin/admin.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { AdminComponent } from './admin/admin.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    AdminComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
