@@ -1,18 +1,15 @@
-a:link {
-  text-decoration: none;
+body {
+  background-color: #eee
 }
 
-a:hover {
-  text-decoration: underline;
+.nav-link:hover {
+  background-color: #525252 !important
 }
 
-.notaMedia{
-  border: solid 1px;
-  border-color: black;
-  width: 2vw;
-  height: 4vh;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  align-items: center;
+.nav-link .fa {
+  transition: all 1s
+}
+
+.nav-link:hover .fa {
+  transform: rotate(360deg)
 }
