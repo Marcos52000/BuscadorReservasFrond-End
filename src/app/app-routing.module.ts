@@ -17,6 +17,7 @@ const routes: Routes = [
     children:[
       { path:"hoteles", component:HotelesComponent},
       { path:"hoteles/add", component:CreateHotelComponent},
+      { path:"hoteles/update/:id", component:CreateHotelComponent},
     ]
   },
 ];
