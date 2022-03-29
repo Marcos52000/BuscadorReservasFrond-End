@@ -1,1 +1,43 @@
+<<<<<<< Updated upstream
 <p>create-hotel works!</p>
+=======
+<app-dashboard></app-dashboard>
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="hotel.nombre">
+    </div>
+    <div class="mb-3">
+      <label for="direccion" class="form-label">Direccion</label>
+      <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="hotel.direccion">
+    </div>
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Telefono</label>
+      <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="hotel.telefono">
+    </div>
+    <div class="mb-3">
+      <label for="pais" class="form-label">Pais</label>
+      <input type="text" class="form-control" id="pais" name="pais" [(ngModel)]="hotel.pais">
+    </div>
+    <div class="mb-3">
+      <label for="estrellas" class="form-label">Estrellas</label>
+      <input type="text" class="form-control" id="estrellas" name="estrellas" [(ngModel)]="hotel.estrellas">
+    </div>
+    <div class="mb-3">
+      <label for="notaMedia" class="form-label">Nota Media</label>
+      <input type="text" class="form-control" id="notaMedia" name="notaMedia" [(ngModel)]="hotel.notamedia">
+    </div>
+    <div class="mb-3">
+      <label for="precio" class="form-label">Precio</label>
+      <input type="text" class="form-control" id="precio" name="precio" [(ngModel)]="hotel.precio">
+    </div>
+    <div class="mb-3">
+      <label for="imagen" class="form-label">Imagen</label>
+      <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="hotel.imagen">
+    </div>
+    <button role="button" class="btn btn-primary" (click)='create()' >Submit</button>
+  </form>
+</div>
+
+>>>>>>> Stashed changes
