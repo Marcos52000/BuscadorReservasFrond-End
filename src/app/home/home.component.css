@@ -11,6 +11,9 @@ a:hover {
 .navbar{
   border-radius: 1vh;
 }
+.barra{
+  padding-left: 15vh;
+}
 .notaMedia{
   border: solid 1px;
   border-color: black;
@@ -23,4 +26,10 @@ a:hover {
 }
 .side{
   border-radius: 2vh;
+}
+.card-hotel{
+  border-radius: 0.7vh;
+}
+p{
+  color:white;
 }
