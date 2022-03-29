@@ -9,13 +9,13 @@ export class UserService {
 
   getById(id: string) {
     return this.http.get(
-      `https://play-systems.herokuapp.com/api/usuarios/${id}`
+      `https://buscadorreservas.herokuapp.com/users${id}`
     );
   }
 
   update(id: any, data: any) {
     return this.http.put(
-      `${`https://play-systems.herokuapp.com/api/usuarios`}/${id}`,
+      `${`https://buscadorreservas.herokuapp.com/users`}/${id}`,
       data
     );
   }
