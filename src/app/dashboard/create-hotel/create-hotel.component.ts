@@ -30,11 +30,11 @@ export class CreateHotelComponent implements OnInit {
   cargar():void{
     this.activateRoute.params.subscribe(
       e=>{
-        let id= e['id'];
+        let id=e['id'];
         if(id){
           this.hotelService.getId(id).subscribe(
             es=>this.hotel=es
-          )
+          );
         }
       }
     )
@@ -43,7 +43,7 @@ export class CreateHotelComponent implements OnInit {
   update():void{
     this.hotelService.update(this.hotel).subscribe(
       res=>this.router.navigate(['/hoteles'])
-    )
+    );
   }
 
 }

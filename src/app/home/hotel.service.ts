@@ -30,7 +30,7 @@ export class HotelService {
     return this.http.post<Hotel>(this.url,hotel);
   }
 
-  getId(id:number):Observable<Hotel>{
+  getId(id?:number):Observable<Hotel>{
     return this.http.get<Hotel>(this.url+'/'+id);
   }
 
