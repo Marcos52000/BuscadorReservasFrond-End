@@ -22,7 +22,7 @@ export class CreateHotelComponent implements OnInit {
   create():void{
     console.log(this.hotel);
     this.hotelService.create(this.hotel).subscribe(
-      res=> this.router.navigate(['/hoteles'])
+      res=> this.router.navigate(['admin/hoteles'])
     );
   }
 
