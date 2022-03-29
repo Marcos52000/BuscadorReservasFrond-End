@@ -27,13 +27,10 @@ import { DataTablesModule } from 'angular-datatables';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-<<<<<<< Updated upstream
     CommonModule,
-    DataTablesModule
-=======
+    DataTablesModule,
     ReactiveFormsModule,
     CommonModule
->>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent]
