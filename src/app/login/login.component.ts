@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../services/auth/user.service'
+import {ApiRestService} from'../services/api-rest.service';
+import { LoginI } from '../modelos/login.interface';
+import { Router } from '@angular/router'; '@angular/route';
+import { ResponseI } from '../modelos/reponse.interface';
+import {FormGroup,FormControl,Validator, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-login',
@@ -7,61 +11,25 @@ import { UserService } from '../services/auth/user.service'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+loginForm = new FormGroup({
+  usuario : new FormControl('',Validators.required),
+  password : new FormControl('',Validators.required)
+})
 
-  login: any = {
-    email: '',
-    password: ''
-  };
-  isLoggedIn = false;
-  isLoginFailed = false;
-  errorMessage = '';
-  msg = '';
-  rol: string | null = '';
 
-  constructor(private userService: UserService) { }
+  constructor(private api: ApiRestService, private router:Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  }
 
-    if(window.sessionStorage.getItem("auth-token"))
-    {
-      this.isLoggedIn = true;
-      this.rol = window.sessionStorage.getItem("auth-rol");
-      this.login.email = window.sessionStorage.getItem("auth-email");
+onLogin(form:LoginI){
+  console.log(form);
+  this.api.loginByEmail(form).subscribe(data=>{
+    let dataResponse:ResponseI = data;
+    if(dataResponse.status=="ok"){
+      localStorage.setItem("token",dataResponse.result.token);
+      this,this.router.navigate(['home']);
     }
-  }
-
-  logUser(): void {
-    this.userService.login(this.login.email, this.login.password).subscribe(response => {
-
-          window.sessionStorage.setItem("auth-token", response.token);
-          window.sessionStorage.setItem("auth-email", this.login.email);
-
-          this.isLoginFailed = false;
-          this.isLoggedIn = true;
-
-          this.recogerRol();
-        },
-        error => {
-          this.isLoginFailed = true;
-          if("Http failure response for https://buscadorreservas.herokuapp.com/login: 403 OK" == error.message)
-          {
-            this.errorMessage = 'Usuario y/o Contraseña Incorrectos';
-          }
-        });
-  }
-
-  recogerRol(): void
-  {
-    this.userService.getemail(this.login.email)
-    .subscribe(
-      response => {
-        window.sessionStorage.setItem("auth-rol", response.rol.nombre);
-        window.location.reload();
-      },
-      error => {
-        console.log(error.message);
-      }
-    );
-  }
+  })
+}
 
 }

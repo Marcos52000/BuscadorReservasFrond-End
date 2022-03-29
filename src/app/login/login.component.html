@@ -4,13 +4,7 @@
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="card bg-white text-dark" style="border-radius: 1rem">
           <div class="card-body p-5 text-center">
-            <form
-              *ngIf="!isLoggedIn"
-              name="form"
-              (ngSubmit)="f.form.valid && logUser()"
-              #f="ngForm"
-              novalidate
-            >
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
               <h5 class="fw-bold mb-2 text-uppercase">
                 Login to our site<i
                   class="candado fa fa-lock fa-3x"
@@ -21,13 +15,9 @@
               <div class="form-floating mb-4">
                 <input
                   type="text"
-                  name="email"
-                  id="floatingemail"
+                  formControlName="usuario"
+                  id="login"
                   class="form-control bg-white text-dark"
-                  [class.is-invalid]="email.errors && f.submitted"
-                  [(ngModel)]="login.email"
-                  required
-                  #email="ngModel"
                 />
                 <label for="floatingemail">email</label>
                 <div id="floatingemail" class="invalid-feedback">
@@ -35,19 +25,10 @@
                 </div>
               </div>
               <div class="form-floating mb-4">
-                <input
-                  type="password"
-                  name="password"
-                  id="floatingPassword"
-                  class="form-control bg-white text-dark"
-                  [class.is-invalid]="password.errors && f.submitted"
-                  [(ngModel)]="login.password"
-                  required
-                  #password="ngModel"
-                />
+                <input type="password"formControlName="password"id="password"class="form-control bg-white text-dark"/>
                 <label for="floatingPassword">Password</label>
                 <div id="floatingPassword" class="invalid-feedback">
-                  <div *ngIf="password.errors?.['required']">
+                  <div>
                     Password is required
                   </div>
                 </div>
@@ -61,13 +42,11 @@
 
               <div
                 class="text-danger mt-5"
-                *ngIf="f.submitted && isLoginFailed"
               >
-                Login failed: {{ errorMessage }}
               </div>
             </form>
-            <div *ngIf="isLoggedIn">
-              <h4>Bienvenido {{ login.email }}</h4>
+            <div>
+              <h4>Bienvenido</h4>
               <button class="btn btn-success mt-5" routerLink="/home">
                 Continuar
               </button>

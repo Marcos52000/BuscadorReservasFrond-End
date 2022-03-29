@@ -15,11 +15,11 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  login(email: string, pass_email: string): Observable<any>
+  login(email: string, contrasena: string): Observable<any>
   {
     return this.http.post(AUTH_API + 'login', {
       email,
-      pass_email
+      123456
     }, httpOptions);
   }
 
@@ -33,11 +33,11 @@ export class UserService {
     return this.http.get(AUTH_API + `emails/`, httpOptions);
   }
 
-  addemail(email: string, pass_email: string, rol: object): Observable<any>
+  addemail(email: string, contrasena: string, rol: object): Observable<any>
   {
     return this.http.post(AUTH_API + `emails/`, {
       email,
-      pass_email,
+      contrasena,
       rol
     }, httpOptions);
   }
