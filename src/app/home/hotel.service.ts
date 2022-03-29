@@ -38,7 +38,7 @@ export class HotelService {
     return this.http.put<Hotel>(this.url,hotel);
   }
 
-  delete(id:number):Observable<Hotel>{
+  delete(id?:number):Observable<Hotel>{
     return this.http.delete<Hotel>(this.url+'/'+id);
   }
 

@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HotelService } from 'src/app/home/hotel.service';
 import { Subject } from 'rxjs';
+import { Hotel } from 'src/app/home/hotel.model';
 
 
 @Component({
@@ -20,6 +21,13 @@ export class HotelesComponent implements OnInit {
 
   }
 
+  delete(hotel:Hotel):void{
+    this.hotelService.delete(hotel.id).subscribe(
+      res=> this.hotelService.getHoteles().subscribe(
+        response=>this.hoteles=response
+      )
+    )
+  }
 
 
 
