@@ -26,6 +26,7 @@ onLogin(form:LoginI){
   this.api.loginByEmail(form).subscribe(data=>{
     let dataResponse:ResponseI = data;
     if(dataResponse.status=="ok"){
+      console.log(dataResponse.result.token);
       localStorage.setItem("token",dataResponse.result.token);
       this,this.router.navigate(['home']);
     }
