@@ -12,20 +12,13 @@ const routes: Routes = [
   { path:'login',component:LoginComponent},
   { path:'register',component:RegisterComponent},
   { path:"home",component:HomeComponent},
-<<<<<<< Updated upstream
+
   { path:"admin", component:DashboardComponent,
     children:[
       { path:"hoteles", component:HotelesComponent},
+      { path:"hoteles/add", component:CreateHotelComponent},
     ]
   },
-=======
-  { path:"admin", component:DashboardComponent},
-  { path:"hoteles", component:HotelesComponent},
-  { path:"hoteles/add", component:CreateHotelComponent},
-
-
-
->>>>>>> Stashed changes
 ];
 
 @NgModule({

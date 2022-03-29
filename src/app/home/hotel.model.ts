@@ -8,8 +8,4 @@ export class Hotel {
   notamedia?:number;
   precio?:number;
   imagen?:string;
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 }

@@ -12,10 +12,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HotelesComponent } from './dashboard/hoteles/hoteles.component';
 import { DataTablesModule } from 'angular-datatables';
-<<<<<<< Updated upstream
 import { authInterceptorProviders } from './helpers/auth.interceptor';
-=======
->>>>>>> Stashed changes
 import { CreateHotelComponent } from './dashboard/create-hotel/create-hotel.component';
 
 @NgModule({

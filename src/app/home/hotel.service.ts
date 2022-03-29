@@ -27,18 +27,6 @@ export class HotelService {
   }
 
   create(hotel:Hotel):Observable<Hotel>{
-    return this.http.post<Hotel>(this.url,hotel)
-  }
-
-  getId(id:number):Observable<Hotel>{
-    return this.http.get<Hotel>(this.url+'/'+id)
-  }
-
-  update(hotel:Hotel):Observable<Hotel>{
-    return this.http.post<Hotel>(this.url,hotel)
-  }
-
-  create(hotel:Hotel):Observable<Hotel>{
     return this.http.post<Hotel>(this.url,hotel);
   }
 
