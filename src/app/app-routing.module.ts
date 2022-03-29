@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HotelesComponent } from './dashboard/hoteles/hoteles.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path:'register',component:RegisterComponent},
   { path:"home",component:HomeComponent},
   { path:"admin", component:DashboardComponent},
+  { path:"hoteles", component:HotelesComponent},
 
 
 
