@@ -5,9 +5,11 @@ import { Subject, Observable } from 'rxjs';
 const baseUrl = 'https://buscadorreservas.herokuapp.com';
 
 export interface User {
-  username: string;
+  email: string;
   password: string;
 }
+
+
 
 @Injectable({
   providedIn: 'root',
@@ -25,6 +27,12 @@ export class LoginService {
     this.user = data;
     this.user$.next(this.user);
     return this.http.post(`${baseUrl}/login`, data);
+  }
+  logOut(data: any) {
+    console.log(data);
+    this.user = data;
+    this.user$.next(this.user);
+    return this.http.post(`${baseUrl}/home`, data);
   }
 
   getByName(id: string): Observable<any> {
