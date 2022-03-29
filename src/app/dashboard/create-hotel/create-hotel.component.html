@@ -35,9 +35,8 @@
     <button role="button" class="btn btn-primary" (click)='create()' *ngIf="!hotel.id else elseBlock">Crear</button>
 
     <ng-template #elseBlock>
-      <button role="button" class="btn btn-primary" (click)='update()' *ngIf="!hotel.id else elseBlock">Actualizar</button>
+      <button role="button" class="btn btn-primary" (click)='update()'>Actualizar</button>
     </ng-template>
-
 
   </form>
 </div>
