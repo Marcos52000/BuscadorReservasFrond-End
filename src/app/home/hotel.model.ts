@@ -6,4 +6,7 @@ export class Hotel {
   pais?:string;
   estrellas?:number;
   notamedia?:number;
+  precio?:number;
+  imagen?:string;
+
 }

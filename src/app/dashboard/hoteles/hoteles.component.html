@@ -1,72 +1,34 @@
-<h1>Angular 13 Datatables Example - Tutsmake.com</h1>
-<table datatable class="row-border hover">
+<h1>Hoteles-administración</h1>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>First name</th>
-      <th>Last name</th>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>Telefono</th>
+      <th>Pais</th>
+      <th>Estrellas</th>
+      <th>NotaMedia</th>
+      <th>Precio</th>
+      <th>Imagen</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Foo</td>
-      <td>Bar</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Someone</td>
-      <td>Youknow</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Iamout</td>
-      <td>Ofinspiration</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Yoda</td>
-      <td>Skywalker</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Patrick</td>
-      <td>Dupont</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Barack</td>
-      <td>Obama</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>François</td>
-      <td>Holland</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Michel</td>
-      <td>Popo</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>Chuck</td>
-      <td>Norris</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>Simon</td>
-      <td>Robin</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>Louis</td>
-      <td>Lin</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>Zelda</td>
-      <td>Link</td>
+    <tr *ngFor="let hotel of hoteles">
+      <td>{{ hoteles.id }}</td>
+      <td>{{ hoteles.nombre }}</td>
+      <td>{{ hoteles.direccion }}</td>
+      <td>{{ hoteles.telefono }}</td>
+      <td>{{ hoteles.pais }}</td>
+      <td>{{ hoteles.estrellas }}</td>
+      <td>{{ hoteles.notamedia }}</td>
+      <td>{{ hoteles.precio }}</td>
+      <td>{{ hoteles.imagen }}</td>
+      <td><i class="fa-solid fa-file-pen"></i></td>
+      <td><i class="fa-solid fa-trash-can"></i></td>
     </tr>
   </tbody>
 </table>
+

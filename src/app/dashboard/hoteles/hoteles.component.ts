@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { HotelService } from 'src/app/home/hotel.service';
 
 @Component({
   selector: 'app-hoteles',
@@ -8,23 +9,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HotelesComponent implements OnInit {
 
-  title = 'datatables';
-  dtOptions: DataTables.Settings = {};
-  posts:any = null;;
+  hoteles:any = null;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private hotelService: HotelService,) { }
 
   ngOnInit(): void {
-    this.dtOptions = {
-      pagingType: 'full_numbers',
-      pageLength: 5,
-      processing: true
-    };
-
-    this.http.get('http://jsonplaceholder.typicode.com/posts')
-      .subscribe(posts => {
-        this.posts = posts;
-    });
-
+    this.hotelService.getHoteles().subscribe(result => this.hoteles = result);
   }
 }
