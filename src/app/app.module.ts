@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HotelesComponent } from './dashboard/hoteles/hoteles.component';
 import { DataTablesModule } from 'angular-datatables';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
+import { CreateHotelComponent } from './dashboard/create-hotel/create-hotel.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
     HomeComponent,
     DashboardComponent,
     HotelesComponent,
+    CreateHotelComponent,
   ],
   imports: [
     BrowserModule,
