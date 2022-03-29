@@ -8,6 +8,9 @@ a:hover {
 .container{
   background-color: #15202B;
 }
+.navbar{
+  border-radius: 1vh;
+}
 .notaMedia{
   border: solid 1px;
   border-color: black;
@@ -19,5 +22,5 @@ a:hover {
   align-items: center;
 }
 .side{
-  background-color: #15202B;
+  border-radius: 2vh;
 }
