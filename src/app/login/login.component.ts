@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ApiRestService} from'../services/api-rest.service';
-import { LoginI } from '../modelos/login.interface';
-import { Router } from '@angular/router'; '@angular/route';
-import { ResponseI } from '../modelos/reponse.interface';
-import {FormGroup,FormControl,Validator, Validators} from '@angular/forms'
+import { Router } from '@angular/router';
+import { LoginService } from '../services/auth/login.service';
 
 @Component({
   selector: 'app-login',
@@ -11,26 +8,39 @@ import {FormGroup,FormControl,Validator, Validators} from '@angular/forms'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-loginForm = new FormGroup({
-  usuario : new FormControl('',Validators.required),
-  password : new FormControl('',Validators.required)
-})
 
+  token: any = 'token inicial';
 
-  constructor(private api: ApiRestService, private router:Router) { }
+  login: any = {
+    username: '',
+    password: '',
+  };
 
-  ngOnInit(): void {  }
+  submitted = false;
 
-onLogin(form:LoginI){
-  console.log(form);
-  this.api.loginByEmail(form).subscribe(data=>{
-    let dataResponse:ResponseI = data;
-    if(dataResponse.status=="ok"){
-      console.log(dataResponse.result.token);
-      localStorage.setItem("token",dataResponse.result.token);
-      this,this.router.navigate(['home']);
-    }
-  })
-}
+  constructor(private loginService: LoginService, private router: Router) {}
 
+  ngOnInit(): void {}
+
+  logUser(): void {
+    const data = {
+      username: this.login.username,
+      password: this.login.password,
+    };
+
+    this.loginService.signUp(data)
+    .subscribe(
+      response => {
+        this.token = response;
+        this.submitted = true;
+        console.log(response);
+        this.router.navigate(['/home']);
+        window.sessionStorage.setItem("auth-token", this.token.token);
+        window.sessionStorage.setItem("auth-username", this.login.username);
+      },
+      error => {
+        console.log(error);
+        alert("Usuario o contraseña incorrecta")
+      });
+  }
 }

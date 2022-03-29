@@ -1,55 +1,36 @@
-<div class="todo">
-  <div class="contenedor container py-3 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-white text-dark" style="border-radius: 1rem">
-          <div class="card-body p-5 text-center">
-            <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
-              <h5 class="fw-bold mb-2 text-uppercase">
-                Login to our site<i
-                  class="candado fa fa-lock fa-3x"
-                  aria-hidden="true"
-                ></i>
-              </h5>
-              <p class="p1 text-black-50 mb-5">Enter email and password</p>
-              <div class="form-floating mb-4">
-                <input
-                  type="text"
-                  formControlName="usuario"
-                  id="login"
-                  class="form-control bg-white text-dark"
-                />
-                <label for="floatingemail">email</label>
-                <div id="floatingemail" class="invalid-feedback">
-                  email is required!
-                </div>
-              </div>
-              <div class="form-floating mb-4">
-                <input type="password"formControlName="password"id="password"class="form-control bg-white text-dark"/>
-                <label for="floatingPassword">Password</label>
-                <div id="floatingPassword" class="invalid-feedback">
-                  <div>
-                    Password is required
+<div id="main">
+  <div *ngIf="!submitted">
+    <div class="submit-form">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h1 id="titulo">Inicia sesión</h1>
+          <div class="col-md-10">
+            <div class="card-group mb-0">
+              <div class="card border-0 p-3">
+                <div class="card-body mt-2">
+                  <h1>Login</h1>
+                  <p class="text-muted">Accede a tu cuenta</p>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Usuario" required [(ngModel)]="login.username"
+                      name="username">
+                  </div>
+                  <div class="input-group mb-4">
+                    <input type="password" class="form-control" placeholder="Contraseña" required
+                      [(ngModel)]="login.password" name="password">
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 d-flex justify-content-end">
+                      <button id="btnacceder" (click)="logUser()" type="submit"
+                        class="btn btn-primary border-0">Acceder</button>
+                      <button id="btnregistro" type="submit" class="btn btn-primary border-0"
+                        routerLink="/register">Regístrate</button>
+                    </div>
+                    <!--<div>
+                  <a type="btn-link" class="btn btn-link px-0 mt-3">Has olvidado tu contraseña?</a>
+                </div> -->
                   </div>
                 </div>
               </div>
-              <button
-                class="btn btn-outline-dark btn-lg mt-3 px-5"
-                type="submit"
-              >
-                Log in
-              </button>
-
-              <div
-                class="text-danger mt-5"
-              >
-              </div>
-            </form>
-            <div>
-              <h4>Bienvenido</h4>
-              <button class="btn btn-success mt-5" routerLink="/home">
-                Continuar
-              </button>
             </div>
           </div>
         </div>

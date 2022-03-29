@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HotelesComponent } from './dashboard/hoteles/hoteles.component';
 import { DataTablesModule } from 'angular-datatables';
+import { authInterceptorProviders } from './helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { DataTablesModule } from 'angular-datatables';
     ReactiveFormsModule,
     CommonModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
