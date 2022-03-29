@@ -1,6 +1,6 @@
-<div class="container ">
+<div class="container">
   <h1 class="text-white">Administrar-Hoteles</h1>
-  <button type="button" class="btn btn-primary mt-2">Crear Hotel</button>
+  <button type="button" class="btn btn-primary mt-2" routerLink="add">Crear Hotel</button>
   <table class="table table-dark table-hover mt-3">
     <thead>
       <tr>
@@ -28,7 +28,7 @@
         <td>{{ hotel.notamedia }}</td>
         <td>{{ hotel.precio }}</td>
         <td>{{ hotel.imagen }}</td>
-        <td><button type="button" class="btn btn-warning" routerLink="update/'{{hotel.id}}"><i class="fa-solid fa-pen"></i></button></td>
+        <td><button type="button" class="btn btn-warning" routerLink="update/{{hotel.id}}"><i class="fa-solid fa-pen"></i></button></td>
         <td><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button></td>
       </tr>
     </tbody>

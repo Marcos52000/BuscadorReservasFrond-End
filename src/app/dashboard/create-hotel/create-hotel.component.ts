@@ -40,4 +40,10 @@ export class CreateHotelComponent implements OnInit {
     )
   }
 
+  update():void{
+    this.hotelService.update(this.hotel).subscribe(
+      res=>this.router.navigate(['/hoteles'])
+    )
+  }
+
 }

@@ -32,7 +32,13 @@
       <label for="imagen" class="form-label">Imagen</label>
       <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="hotel.imagen">
     </div>
-    <button role="button" class="btn btn-primary" (click)='create()'>Submit</button>
+    <button role="button" class="btn btn-primary" (click)='create()' *ngIf="!hotel.id else elseBlock">Crear</button>
+
+    <ng-template #elseBlock>
+      <button role="button" class="btn btn-primary" (click)='update()' *ngIf="!hotel.id else elseBlock">Actualizar</button>
+    </ng-template>
+
+
   </form>
 </div>
 
