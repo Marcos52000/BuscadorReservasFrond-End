@@ -14,6 +14,8 @@ import { HotelesComponent } from './dashboard/hoteles/hoteles.component';
 import { DataTablesModule } from 'angular-datatables';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { CreateHotelComponent } from './dashboard/create-hotel/create-hotel.component';
+import { CreateClienteComponent } from './dashboard/create-cliente/create-cliente.component';
+import { ClientesComponent } from './dashboard/clientes/clientes.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { CreateHotelComponent } from './dashboard/create-hotel/create-hotel.comp
     DashboardComponent,
     HotelesComponent,
     CreateHotelComponent,
+    CreateClienteComponent,
+    ClientesComponent,
   ],
   imports: [
     BrowserModule,

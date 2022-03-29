@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HotelesComponent } from './dashboard/hoteles/hoteles.component';
 import { CreateHotelComponent } from './dashboard/create-hotel/create-hotel.component';
+import { CreateClienteComponent } from './dashboard/create-cliente/create-cliente.component';
+import { ClientesComponent } from './dashboard/clientes/clientes.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,9 @@ const routes: Routes = [
       { path:"hoteles", component:HotelesComponent},
       { path:"hoteles/add", component:CreateHotelComponent},
       { path:"hoteles/update/:id", component:CreateHotelComponent},
+      { path:"clientes", component:ClientesComponent},
+      { path:"clientes/add", component:CreateClienteComponent},
+      { path:"clientes/update/:id", component:CreateClienteComponent},
     ]
   },
 ];

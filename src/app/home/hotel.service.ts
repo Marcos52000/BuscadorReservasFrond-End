@@ -35,7 +35,7 @@ export class HotelService {
   }
 
   update(hotel:Hotel):Observable<Hotel>{
-    return this.http.put<Hotel>(this.url,hotel);
+    return this.http.put<Hotel>(this.url+'/'+hotel.id,hotel);
   }
 
   delete(id?:number):Observable<Hotel>{
