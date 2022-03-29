@@ -8,11 +8,11 @@ import { Cliente } from './cliente.model';
 })
 export class ClienteService {
 
-  private url:string="https://buscadorreservas.herokuapp.com/api/hoteles"
+  private url:string="https://buscadorreservas.herokuapp.com/api/clientes"
 
   constructor(private http:HttpClient) { }
 
-  getHoteles():Observable<Cliente[]>{
+  getClientes():Observable<Cliente[]>{
 
     return this.http.get<Cliente[]>(this.url);
 
