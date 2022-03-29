@@ -5,7 +5,9 @@ a:link {
 a:hover {
   text-decoration: underline;
 }
-
+.container{
+  background-color: #15202B;
+}
 .notaMedia{
   border: solid 1px;
   border-color: black;
