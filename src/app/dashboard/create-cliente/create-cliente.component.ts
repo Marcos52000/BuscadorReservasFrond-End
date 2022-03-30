@@ -44,6 +44,7 @@ export class CreateClienteComponent implements OnInit {
     this.clienteService.update(this.cliente).subscribe(
       res=>this.router.navigate(['admin/clientes'])
     );
+    this.router.navigate(['admin/hoteles'])
   }
 
 }

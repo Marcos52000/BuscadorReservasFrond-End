@@ -53,7 +53,9 @@ export class CreateReservaComponent implements OnInit {
         let id=e['id'];
         if(id){
           this.reservaService.getId(id).subscribe(
-            es=>this.reserva=es
+            es=>{
+              this.reserva=es;
+            }
           );
         }
       }
