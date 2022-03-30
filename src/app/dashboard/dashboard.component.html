@@ -1,18 +1,10 @@
-
- <!-- Navbar -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
 
@@ -20,12 +12,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Navbar brand -->
       <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-          height="15"
-          alt="MDB Logo"
-          loading="lazy"
-        />
+        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo"
+          loading="lazy" />
       </a>
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -52,21 +40,12 @@
 
       <!-- Notifications -->
       <div class="dropdown">
-        <a
-          class="text-reset me-3 dropdown-toggle hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
+        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button"
+          data-mdb-toggle="dropdown" aria-expanded="false">
           <i class="fas fa-bell"></i>
           <span class="badge rounded-pill badge-notification bg-danger">1</span>
         </a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuLink"
-        >
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
           <li>
             <a class="dropdown-item" href="#">Some news</a>
           </li>
@@ -80,26 +59,12 @@
       </div>
       <!-- Avatar -->
       <div class="dropdown">
-        <a
-          class="dropdown-toggle d-flex align-items-center hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuAvatar"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-            class="rounded-circle"
-            height="25"
-            alt="Black and White Portrait of a Man"
-            loading="lazy"
-          />
+        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+          role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+            alt="Black and White Portrait of a Man" loading="lazy" />
         </a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuAvatar"
-        >
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
           <li>
             <a class="dropdown-item" href="#">My profile</a>
           </li>
@@ -107,7 +72,7 @@
             <a class="dropdown-item" href="#">Settings</a>
           </li>
           <li>
-            <a class="dropdown-item" href="#">Logout</a>
+            <a class="dropdown-item" href="/home">Logout</a>
           </li>
         </ul>
       </div>
@@ -120,21 +85,25 @@
 <!-- SideBar -->
 <div class="container-fluid mt-2">
   <div class="row flex-nowrap">
-    <div class="d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark side" style="width: 250px;">
+    <div class="d-flex flex-column vh-100  p-3 text-white bg-dark side" style="width: 250px;">
       <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-          <span class="fs-5 d-none d-sm-inline">Filtros</span>
+        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 text-white text-decoration-none">
+          <span class="fs-5 d-none d-sm-inline">Dashboard</span>
         </a>
         <ul class="nav nav-pills flex-column mb-auto">
-          <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> <i class="fa fa-home"></i><span class="ms-2">Home</span> </a> </li>
-          <li> <a href="admin/hoteles" class="nav-link text-white bg-dark"> <i class="fa fa-solid fa-table-cells"></i><span class="ms-2">Hoteles</span> </a> </li>
-          <li> <a href="admin/reservas" class="nav-link text-white bg-dark"> <i class="fa fa-solid fa-table-cells"></i><span class="ms-2">Reservas</span> </a> </li>
-          <li> <a href="admin/clientes" class="nav-link text-white bg-dark"> <i class="fa fa-solid fa-table-cells"></i><span class="ms-2">Clientes</span> </a> </li>
+          <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> <i class="fa fa-home"></i><span
+                class="ms-2">Home</span> </a> </li>
+          <li> <a href="admin/hoteles" class="nav-link text-white bg-dark"> <i
+                class="fa fa-solid fa-table-cells"></i><span class="ms-2">Hoteles</span> </a> </li>
+          <li> <a href="admin/reservas" class="nav-link text-white bg-dark"> <i
+                class="fa fa-solid fa-table-cells"></i><span class="ms-2">Reservas</span> </a> </li>
+          <li> <a href="admin/clientes" class="nav-link text-white bg-dark"> <i
+                class="fa fa-solid fa-table-cells"></i><span class="ms-2">Clientes</span> </a> </li>
         </ul>
       </div>
     </div>
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
   </div>
-</div>
-<div class="col py-3 d-inline">
-  <router-outlet></router-outlet>
 </div>

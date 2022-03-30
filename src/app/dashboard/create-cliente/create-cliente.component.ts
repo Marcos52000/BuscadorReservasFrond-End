@@ -42,7 +42,7 @@ export class CreateClienteComponent implements OnInit {
   update():void{
     console.log(this.cliente);
     this.clienteService.update(this.cliente).subscribe(
-      res=>this.router.navigate(['admin/hoteles'])
+      res=>this.router.navigate(['admin/clientes'])
     );
   }
 

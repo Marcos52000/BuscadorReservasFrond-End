@@ -6,7 +6,7 @@
       <tr>
         <th>ID</th>
         <th>Nombre</th>
-        <th>Direccion</th>
+        <th>Apellido</th>
         <th>Telefono</th>
         <th>DNI</th>
         <th>Editar</th>
@@ -17,9 +17,9 @@
       <tr *ngFor="let cliente of clientes">
         <td>{{ cliente.id }}</td>
         <td>{{ cliente.nombre }}</td>
-        <td>{{ cliente.direccion }}</td>
+        <td>{{ cliente.apellido }}</td>
         <td>{{ cliente.telefono }}</td>
-        <td>{{ cliente.pais }}</td>
+        <td>{{ cliente.dni }}</td>
         <td><button type="button" class="btn btn-warning" routerLink="update/{{cliente.id}}"><i class="fa-solid fa-pen"></i></button></td>
         <td><button type="button" class="btn btn-danger" (click)="delete(cliente)"><i class="fa-solid fa-trash-can"></i></button></td>
       </tr>
