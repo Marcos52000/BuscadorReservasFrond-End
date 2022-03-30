@@ -1,0 +1,33 @@
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Reservar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content pb-4">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reserva</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="col mt-2">
+        <blockquote class="blockquote">
+          <p>Fecha de Entrada</p>
+        </blockquote>
+        <input type="date" class="form-control" placeholder="Data" aria-label="Data" />
+      </div>
+      <div class="col mt-2">
+        <blockquote class="blockquote">
+          <p>Fecha de Salida</p>
+        </blockquote>
+        <input type="date" class="form-control" placeholder="Data" aria-label="Data" />
+      </div>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Realizar Reserva</button>
+      </div>
+  </div>
+</div>
+
