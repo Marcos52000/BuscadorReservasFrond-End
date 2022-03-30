@@ -11,5 +11,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  logOut(): void {
+    window.sessionStorage.removeItem("auth-email");
+    window.location.href="/home";
+  }
 }

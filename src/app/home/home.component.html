@@ -185,7 +185,11 @@
                 <p class="card-text">{{ hotel.pais}}</p>
                 <p class="card-text">{{ hotel.direccion }}</p>
                 <p class="card-text">Precio: {{ hotel.precio}} €</p>
-                <button type="button" class="btn btn-primary">Buscar</button>
+
+                <div *ngIf="username != null">
+                  <button type="button" class="btn btn-primary">Reservar</button>
+                </div>
+
               </div>
             </div>
           </div>
