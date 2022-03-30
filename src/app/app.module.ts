@@ -16,7 +16,6 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { CreateHotelComponent } from './dashboard/create-hotel/create-hotel.component';
 import { CreateClienteComponent } from './dashboard/create-cliente/create-cliente.component';
 import { ClientesComponent } from './dashboard/clientes/clientes.component';
-import { ReservarComponent } from './reservar/reservar.component';
 import { HomeDashboardComponent } from './dashboard/home-dashboard/home-dashboard.component';
 import { CreateReservaComponent } from './dashboard/create-reserva/create-reserva.component';
 import { ReservasComponent } from './dashboard/reservas/reservas.component';
@@ -32,7 +31,6 @@ import { ReservasComponent } from './dashboard/reservas/reservas.component';
     CreateHotelComponent,
     CreateClienteComponent,
     ClientesComponent,
-    ReservarComponent,
     HomeDashboardComponent,
     CreateReservaComponent,
     ReservasComponent,

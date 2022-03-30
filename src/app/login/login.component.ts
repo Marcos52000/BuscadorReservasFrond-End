@@ -41,7 +41,8 @@ export class LoginComponent implements OnInit {
           }
           window.sessionStorage.setItem("auth-token", this.token.token);
           window.sessionStorage.setItem("auth-email", this.login.email);
-
+          window.sessionStorage.setItem("id",this.login.id);
+          window.sessionStorage.getItem("",);
         },
         error => {
           console.log(error);

@@ -189,7 +189,37 @@
                 <p class="card-text">Precio: {{ hotel.precio}} €</p>
 
                 <div *ngIf="username != null" class="boton">
-                  <button type="button" class="btn btn-primary"routerLink="/reservar">Reservar</button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Reservar
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content pb-4">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-black" id="exampleModalLabel">Reserva</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="col mt-2">
+                          <blockquote class="blockquote">
+                            <p class="text-black">Fecha de Entrada</p>
+                          </blockquote>
+                          <input type="text" class="form-control" id="fechaEntrada" name="fecha_entrada" pattern="\d{1,2}/\d{1,2}/\d{4}" [(ngModel)]="reserva.fecha_entrada">
+                        </div>
+                        <div class="col mt-2">
+                          <blockquote class="blockquote">
+                            <p class="text-black">Fecha de Salida</p>
+                          </blockquote>
+                          <input type="text" class="form-control" id="fechaSalida" name="fecha_salida" pattern="\d{1,2}/\d{1,2}/\d{4}" [(ngModel)]="reserva.fecha_salida">
+                        </div>
+                        <div class="modal-footer">
+                          <button role="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                          <button role="button" class="btn btn-success"(click)="create()">Realizar Reserva</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
               </div>
