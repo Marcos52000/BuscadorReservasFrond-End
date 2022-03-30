@@ -21,7 +21,6 @@
         <td>{{ reserva.importe }}</td>
         <td>{{ reserva.idCliente }}</td>
         <td>{{ reserva.idHotel }}</td>
-
         <td><button type="button" class="btn btn-warning" routerLink="update/{{reserva.id}}"><i class="fa-solid fa-pen"></i></button></td>
         <td><button type="button" class="btn btn-danger" (click)="delete(reserva)"><i class="fa-solid fa-trash-can"></i></button></td>
       </tr>

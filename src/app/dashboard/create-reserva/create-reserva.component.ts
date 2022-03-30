@@ -22,7 +22,7 @@ export class CreateReservaComponent implements OnInit {
   create():void{
     console.log(this.reserva);
     this.reservaService.create(this.reserva).subscribe(
-      res=> this.router.navigate(['admin/hoteles'])
+      res=> this.router.navigate(['admin/reservas'])
     );
   }
 

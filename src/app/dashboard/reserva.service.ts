@@ -8,7 +8,7 @@ import { Reserva } from './reserva.model';
 })
 export class ReservaService {
 
-  private url:string="https://buscadorreservas.herokuapp.com/api/clientes"
+  private url:string="https://buscadorreservas.herokuapp.com/api/reservas"
 
   constructor(private http:HttpClient) { }
 
