@@ -1,15 +1,16 @@
 body {
-  background-color: #eee
+  background-color: #eee;
 }
 
 .nav-link:hover {
-  background-color: #525252 !important
+  background-color: #525252 !important;
 }
 
 .nav-link .fa {
-  transition: all 1s
+  transition: all 1s;
 }
 
 .nav-link:hover .fa {
-  transform: rotate(360deg)
+  transform: rotate(360deg);
 }
+

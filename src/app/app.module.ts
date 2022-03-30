@@ -18,6 +18,7 @@ import { CreateClienteComponent } from './dashboard/create-cliente/create-client
 import { ClientesComponent } from './dashboard/clientes/clientes.component';
 import { ReservasComponent } from './dashboard/reservas/reservas.component';
 import { CreateReservaComponent } from './dashboard/create-reserva/create-reserva.component';
+import { HomeDashboardComponent } from './dashboard/home-dashboard/home-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CreateReservaComponent } from './dashboard/create-reserva/create-reserv
     ClientesComponent,
     ReservasComponent,
     CreateReservaComponent,
+    HomeDashboardComponent,
   ],
   imports: [
     BrowserModule,
