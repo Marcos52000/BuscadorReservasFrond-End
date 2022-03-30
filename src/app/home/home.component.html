@@ -172,21 +172,23 @@
             <div class="col-md-8">
               <div class="card-body">
                 <div>
-                  <h5 class="card-title d-inline">{{ hotel.nombre }}</h5>
-                  <p class = "card-text d-inline">Valoracion:</p>
-                  <div class="card-text notaMedia d-inline float-end">{{ hotel.notamedia }}</div>
+                  <h5 class="card-title d-inline text-black">{{ hotel.nombre }}</h5>
+                  <div class="card-text notaMedia d-inline float-end text-white">{{ hotel.notamedia }}</div>
+                  <p class = "card-text d-inline float-end me-2">Valoracion: </p>
+
                 </div>
-                <p>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+                <p >
+                  <i *ngIf="hotel.estrellas>=1"class="fa-solid fa-star"></i>
+                  <i *ngIf="hotel.estrellas>=2"class="fa-solid fa-star"></i>
+                  <i *ngIf="hotel.estrellas>=3"class="fa-solid fa-star"></i>
+                  <i *ngIf="hotel.estrellas>=4"class="fa-solid fa-star"></i>
+                  <i *ngIf="hotel.estrellas>=5"class="fa-solid fa-star"></i>
                 </p>
                 <p class="card-text">{{ hotel.pais}}</p>
                 <p class="card-text">{{ hotel.direccion }}</p>
                 <p class="card-text">Precio: {{ hotel.precio}} €</p>
 
-                <div *ngIf="username != null">
+                <div *ngIf="username != null" class="boton">
                   <button type="button" class="btn btn-primary"routerLink="/reservar">Reservar</button>
                 </div>
 

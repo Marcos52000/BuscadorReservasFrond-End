@@ -1,21 +1,32 @@
 a:link {
   text-decoration: none;
 }
+
 .imagen{
   height: 100vh;
 }
+
+.boton{
+  float: right;
+  margin-top: -4vh;
+}
+
 a:hover {
   text-decoration: underline;
 }
+
 .container{
   background-color: #15202B;
 }
+
 .navbar{
   border-radius: 1vh;
 }
+
 .barra{
   padding-left: 15vh;
 }
+
 .notaMedia{
   border: solid 1px;
   border-color: black;
@@ -26,12 +37,15 @@ a:hover {
   display: flex;
   align-items: center;
 }
+
 .side{
   border-radius: 2vh;
 }
+
 .card-hotel{
   border-radius: 0.7vh;
 }
+
 p{
   color:white;
 }
