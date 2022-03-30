@@ -63,9 +63,26 @@ export class CreateReservaComponent implements OnInit {
   }
 
   update():void{
-    console.log(this.reserva);
-    this.reservaService.update(this.reserva).subscribe(
-      res=>this.router.navigate(['admin/reservas'])
+    const data= {
+      fecha_entrada: this.reserva.fecha_entrada,
+      fecha_salida: this.reserva.fecha_salida,
+      importe: this.reserva.importe,
+      cliente: {},
+      hotel: {},
+    };
+    this.clienteService.getId(this.reserva.id_cliente).subscribe(
+      data2=> {
+        data.cliente = data2;
+        this.hotelService.getId(this.reserva.id_hotel).subscribe(
+          data3=> {
+            data.hotel = data3;
+            this.reservaService.update(data,this.reserva.id).subscribe(
+              res=> this.router.navigate(['admin/reservas'])
+            );
+          }
+        )
+        this.router.navigate(['admin/reservas']);
+      }
     );
   }
 }

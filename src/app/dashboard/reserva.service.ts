@@ -6,6 +6,7 @@ import { Reserva } from './reserva.model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ReservaService {
 
   private url:string="https://buscadorreservas.herokuapp.com/api/reservas"
@@ -24,8 +25,8 @@ export class ReservaService {
     return this.http.get<Reserva>(this.url+'/'+id);
   }
 
-  update(reserva:Reserva):Observable<Reserva>{
-    return this.http.put<Reserva>(this.url+'/'+reserva.id,reserva);
+  update(reserva:Reserva,id?:number):Observable<Reserva>{
+    return this.http.put<Reserva>(this.url+'/'+id,reserva);
   }
 
   delete(id?:number):Observable<Reserva>{

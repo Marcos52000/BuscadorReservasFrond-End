@@ -14,7 +14,7 @@
     </div>
     <div class="mb-3">
       <label for="id_cliente" class="form-label">Id Cliente</label>
-      <input type="text" class="form-control" id="id_cliente" name="id_cliente"  [(ngModel)]="reserva.id_cliente">
+      <input type="text" class="form-control" id="id_cliente" name="id_cliente" [(ngModel)]="reserva.id_cliente">
     </div>
     <div class="mb-3">
       <label for="id_hotel" class="form-label">Id Hotel</label>
@@ -24,7 +24,6 @@
     <ng-template #elseBlock>
       <button role="button" class="btn btn-primary" (click)='update()'>Actualizar reserva</button>
     </ng-template>
-
   </form>
 </div>
 
