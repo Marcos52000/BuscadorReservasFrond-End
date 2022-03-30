@@ -16,6 +16,8 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { CreateHotelComponent } from './dashboard/create-hotel/create-hotel.component';
 import { CreateClienteComponent } from './dashboard/create-cliente/create-cliente.component';
 import { ClientesComponent } from './dashboard/clientes/clientes.component';
+import { ReservasComponent } from './dashboard/reservas/reservas.component';
+import { CreateReservaComponent } from './dashboard/create-reserva/create-reserva.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ClientesComponent } from './dashboard/clientes/clientes.component';
     CreateHotelComponent,
     CreateClienteComponent,
     ClientesComponent,
+    ReservasComponent,
+    CreateReservaComponent,
   ],
   imports: [
     BrowserModule,
