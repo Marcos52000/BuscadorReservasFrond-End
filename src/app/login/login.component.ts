@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           this.submitted = true;
           console.log(response);
           if (this.login.email == "Albert" || this.login.email == "admin") {
-            this.router.navigate(['/admin']);
+            this.router.navigate(['/admin/home']);
           } else {
             this.router.navigate(['/home']);
           }

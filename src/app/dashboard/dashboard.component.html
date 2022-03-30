@@ -12,8 +12,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Navbar brand -->
       <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <img src="../../assets/Don-reservas.png" height="35" alt="MDB Logo"
-          loading="lazy" />
+        <img src="../../assets/Don-reservas.png" height="35" alt="MDB Logo" loading="lazy" />
       </a>
     </div>
     <!-- Collapsible wrapper -->
@@ -26,6 +25,7 @@
       <div class="dropdown">
         <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
           role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+          <a class="me-2">{{username}}</a>
           <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
             alt="Black and White Portrait of a Man" loading="lazy" />
         </a>
@@ -55,8 +55,8 @@
           <span class="fs-5 d-none d-sm-inline">Dashboard</span>
         </a>
         <ul class="nav nav-pills flex-column mb-auto">
-          <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> <i class="fa fa-home"></i><span
-                class="ms-2">Home</span> </a> </li>
+          <li class="nav-item"> <a href="admin/home" class="nav-link active" aria-current="page"> <i
+                class="fa fa-home"></i><span class="ms-2">Home</span> </a> </li>
           <li> <a href="admin/hoteles" class="nav-link text-white bg-dark"> <i
                 class="fa fa-solid fa-table-cells"></i><span class="ms-2">Hoteles</span> </a> </li>
           <li> <a href="admin/reservas" class="nav-link text-white bg-dark"> <i
@@ -66,8 +66,11 @@
         </ul>
       </div>
     </div>
-    <div class="col">
-      <router-outlet></router-outlet>
-    </div>
+
+  <div class = "col">
+    <router-outlet></router-outlet>
   </div>
+
 </div>
+
+
