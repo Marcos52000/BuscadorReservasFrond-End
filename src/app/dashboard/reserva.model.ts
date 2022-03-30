@@ -3,5 +3,6 @@ export class Reserva {
   fechaEntrada?:Date;
   fechaSalida?:Date;
   importe?:number;
-
+  idCliente?:number;
+  idHotel?:number;
 }

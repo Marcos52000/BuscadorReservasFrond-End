@@ -12,7 +12,7 @@ export class ReservaService {
 
   constructor(private http:HttpClient) { }
 
-  getClientes():Observable<Reserva[]>{
+  getReservas():Observable<Reserva[]>{
     return this.http.get<Reserva[]>(this.url);
   }
 
