@@ -10,6 +10,8 @@ import { CreateClienteComponent } from './dashboard/create-cliente/create-client
 import { ClientesComponent } from './dashboard/clientes/clientes.component';
 import { ReservarComponent } from './reservar/reservar.component';
 import { HomeDashboardComponent } from './dashboard/home-dashboard/home-dashboard.component';
+import { ReservasComponent } from './dashboard/reservas/reservas.component';
+import { CreateReservaComponent } from './dashboard/create-reserva/create-reserva.component';
 
 
 
@@ -28,6 +30,9 @@ const routes: Routes = [
       { path: "clientes/add", component: CreateClienteComponent },
       { path: "clientes/update/:id", component: CreateClienteComponent },
       { path: "home", component: HomeDashboardComponent },
+      { path: "reservas", component: ReservasComponent },
+      { path: "reservas/add", component: CreateReservaComponent },
+      { path: "reservas/update/:id", component: CreateReservaComponent },
     ]
   },
 ];
