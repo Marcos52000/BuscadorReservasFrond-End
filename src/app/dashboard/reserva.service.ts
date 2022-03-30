@@ -16,16 +16,16 @@ export class ReservaService {
     return this.http.get<Reserva[]>(this.url);
   }
 
-  create(cliente:Reserva):Observable<Reserva>{
-    return this.http.post<Reserva>(this.url,cliente);
+  create(reserva:Reserva):Observable<Reserva>{
+    return this.http.post<Reserva>(this.url,reserva);
   }
 
   getId(id?:number):Observable<Reserva>{
     return this.http.get<Reserva>(this.url+'/'+id);
   }
 
-  update(cliente:Reserva):Observable<Reserva>{
-    return this.http.put<Reserva>(this.url+'/'+cliente.id,cliente);
+  update(reserva:Reserva):Observable<Reserva>{
+    return this.http.put<Reserva>(this.url+'/'+reserva.id,reserva);
   }
 
   delete(id?:number):Observable<Reserva>{
